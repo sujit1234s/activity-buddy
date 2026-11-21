@@ -42,3 +42,7 @@ activity-buddy/
 │   ├── feature_a2.png
 │   └── feature_bc.png
 └── README.md           # Project documentation
+
+## Demo Video & Reflection Note
+- **2-Minute Demo Video:** [Watch Demo on Google Drive](https://drive.google.com/file/d/1HdXyHIunIIVjSENlMd4-KhMMEX3Gj-jw/view?usp=sharing)
+- **Reflection Note:** [View Reflection Note](docs/Activity Buddy.docx)
