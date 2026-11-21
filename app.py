@@ -8,8 +8,106 @@ from ai import (
 )
 
 st.set_page_config(page_title="Activity Buddy", page_icon="🧸", layout="centered")
-st.title("🧸 Activity Buddy")
-st.caption("An AI helper for preschool teachers and parents (Use dummy names like Child A only)")
+
+# --- SpacECE PDF COLOR SCHEME & STYLING ---
+st.markdown("""
+<style>
+    /* Main Cream-White Canvas & Navy Text */
+    .stApp {
+        background-color: #FFFDF8;
+        color: #14365D;
+    }
+
+    /* SpacECE Navy Banner with Warm Gold Bottom Accent */
+    .spacece-header {
+        background-color: #14365D;
+        color: #FFFFFF;
+        padding: 20px 24px;
+        border-radius: 12px;
+        border-bottom: 5px solid #E8A825;
+        margin-bottom: 18px;
+        box-shadow: 0 4px 10px rgba(20, 54, 93, 0.12);
+    }
+    .spacece-header h1 {
+        color: #FFFFFF !important;
+        margin: 0;
+        font-size: 1.85rem;
+    }
+    .spacece-header p {
+        color: #FDF8EE;
+        margin: 6px 0 0 0;
+        font-size: 0.95rem;
+    }
+
+    /* Section Headings */
+    h2, h3, h4 {
+        color: #14365D !important;
+    }
+
+    /* Activity Cards (Soft Cream with Gold Left Accent) */
+    div[data-testid="stVerticalBlockBorderWrapper"] {
+        background-color: #FDF8EE;
+        border: 1px solid #E2D5B5;
+        border-left: 5px solid #E8A825;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 12px;
+        box-shadow: 0 3px 8px rgba(20, 54, 93, 0.06);
+    }
+
+    /* Primary & Secondary Buttons */
+    div.stButton > button[kind="primary"] {
+        background-color: #14365D !important;
+        color: #FFFFFF !important;
+        border: none !important;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    div.stButton > button[kind="primary"]:hover {
+        background-color: #E8A825 !important;
+        color: #14365D !important;
+    }
+    div.stButton > button[kind="secondary"] {
+        background-color: #FDF8EE !important;
+        color: #14365D !important;
+        border: 1.5px solid #14365D !important;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+    div.stButton > button[kind="secondary"]:hover {
+        background-color: #E8A825 !important;
+        border-color: #E8A825 !important;
+        color: #14365D !important;
+    }
+
+    /* Tabs Styling */
+    button[data-baseweb="tab"] {
+        color: #14365D !important;
+        font-weight: 600;
+    }
+    button[data-baseweb="tab"][aria-selected="true"] {
+        color: #14365D !important;
+        border-bottom-color: #E8A825 !important;
+        font-weight: 700;
+    }
+
+    /* Callout / Info Boxes (Soft Ice Blue) */
+    div[data-testid="stAlert"] {
+        background-color: #EBF3FA;
+        color: #14365D;
+        border-left: 4px solid #14365D;
+        border-radius: 8px;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+# --- HEADER ---
+st.markdown("""
+<div class="spacece-header">
+    <h1>🧸 Activity Buddy</h1>
+    <p>An AI helper for preschool teachers and parents (Use dummy names like Child A only) • SpacECE India Foundation</p>
+</div>
+""", unsafe_allow_html=True)
 
 tab1, tab2 = st.tabs(["🎨 A. Activity Ideas", "🎙️ B & C. Voice Note & Parent Message"])
 
